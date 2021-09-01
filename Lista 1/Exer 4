@@ -1,0 +1,67 @@
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
+/*  Thiago Matheus Mendes dos Santos
+    Matrícula: 04059879
+    Turma: 4NMA */
+
+int main(){
+    float conta = 1000;
+    int cheque = 2000;
+    int escolha;
+    float deposito;
+    float saque;
+    float estouro;
+    float descontado;
+    
+    
+	printf("Qual operaï¿½ï¿½o deseja fazer? 1 Depï¿½sito. 2 Saque: \n");
+    scanf("%d", &escolha);
+    printf("============================================================= \n");
+    if (escolha == 1)
+    {
+        printf("Qual valor deseja depositar? ");
+        scanf("%f", &deposito);
+        printf("O seguinte valor foi depositado com sucesso: %.2f\n", deposito);
+        printf("Novo saldo: %.2f\n", deposito + conta);
+    }
+    else
+    {
+        if (escolha == 2)
+        {
+            printf("Digite o valor que quer sacar: ");
+            scanf("%f", &saque);
+            if (saque > conta)
+            {
+                if (saque <= (conta + cheque))
+                {
+                	printf("O seguinte valor foi retirado com sucesso: %.2f\n", saque);
+                    printf("Vocï¿½ estourou seu saldo e serï¿½ descontado do cheque! \n");
+                    descontado = saque - conta;
+                    printf("Valor do cheque descontado: %.2f\n", cheque - descontado);
+				}
+            	else
+            	{
+                	printf("O valor desejado ï¿½ maior que saldo e o cheque juntos! \n");
+                }
+            }
+            else
+            {
+            	printf("O seguinte valor foi retirado com sucesso: %.2f\n", saque);
+            	printf("Novo saldo: %.2f\n", conta - saque);
+            	// Teste
+			   	if (conta < 1)
+			   	{
+			   		printf("Vocï¿½ zerou a conta! \n");
+				}
+				// Teste
+			}
+        }
+        else
+        {
+            printf("Escolha uma opï¿½ï¿½o! \n");
+        }
+    }
+	printf("============================================================= \n");
+}
