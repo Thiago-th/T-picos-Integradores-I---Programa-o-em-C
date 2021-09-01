@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*  Thiago Matheus Mendes dos Santos
+    Matrícula: 04059879
+    Turma: 4NMA
+    
+Uma revenda de cosm�ticos paga aos seus funcion�rios um sal�rio base de 3 sal�riosm�nimos, al�m disso paga uma comiss�o de R$ 10,00 por produtos vendidos e mais 3% 
+do valor das vendas. Ent�o, fa�a um programa que determine o sal�rio final de um vendedor. */
+
+int main(){
+    float quantidade;
+    float resultado;
+    float soma_produtos;
+    float soma;
+    float salario = 3300; // Sal. M�n. = 1.100;
+    
+    
+    printf("Quantidade de produtos vendidos: ");
+    scanf("%f", &quantidade);
+    
+    soma_produtos = quantidade * 10;
+    soma = soma_produtos + salario;
+    printf("Sal�rio antes do reajuste: %.2f\n", soma);
+    
+    resultado = soma + (soma * 0.03);
+    printf("Sal�rio com o reajuste de +3%% � de: %.2f\n", resultado);
+}
