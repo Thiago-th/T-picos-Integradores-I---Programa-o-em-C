@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /*  Thiago Matheus Mendes dos Santos
-    Matrícula: 04059879
+    Matricula: 04059879
     Turma: 4NMA */
 
 int main(){
@@ -24,7 +24,7 @@ int main(){
 	
 	printf("Valor depois da divisï¿½o: \n");
 	
-	printf("Joï¿½o vai pagar: %.d\n", joao);
+	printf("Joao vai pagar: %.d\n", joao);
 	printf("Ricardo vai pagar: %.d\n", ricardo);
 	printf("Rodrigo vai pagar: %.2f\n", rodrigo);
 }
