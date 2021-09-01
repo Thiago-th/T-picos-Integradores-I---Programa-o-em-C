@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /*  Thiago Matheus Mendes dos Santos
-    Matrícula: 04059879
+    Matricula: 04059879
     Turma: 4NMA */
 
 int main(){
@@ -10,7 +10,7 @@ int main(){
     float resultado;
     float soma_produtos;
     float soma;
-    float salario = 3300; // Sal. Mï¿½n. = 1.100;
+    float salario = 3300; // Sal. Min. = 1.100;
     
     
     printf("Quantidade de produtos vendidos: ");
@@ -18,8 +18,8 @@ int main(){
     
     soma_produtos = quantidade * 10;
     soma = soma_produtos + salario;
-    printf("Salï¿½rio antes do reajuste: %.2f\n", soma);
+    printf("Salario antes do reajuste: %.2f\n", soma);
     
     resultado = soma + (soma * 0.03);
-    printf("Salï¿½rio com o reajuste de +3%% ï¿½ de: %.2f\n", resultado);
+    printf("Salario com o reajuste de +3%% foi de: %.2f\n", resultado);
 }
