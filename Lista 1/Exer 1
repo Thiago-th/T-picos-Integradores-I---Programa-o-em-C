@@ -1,8 +1,9 @@
+#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 
 /*  Thiago Matheus Mendes dos Santos
-    Matrícula: 04059879
+    Matricula: 04059879
     Turma: 4NMA */
 
 int main(){
