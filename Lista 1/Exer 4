@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /*  Thiago Matheus Mendes dos Santos
-    Matrícula: 04059879
+    Matricula: 04059879
     Turma: 4NMA */
 
 int main(){
@@ -16,7 +16,7 @@ int main(){
     float descontado;
     
     
-	printf("Qual operaï¿½ï¿½o deseja fazer? 1 Depï¿½sito. 2 Saque: \n");
+	printf("Qual operacao deseja fazer? 1 Deposito. 2 Saque: \n");
     scanf("%d", &escolha);
     printf("============================================================= \n");
     if (escolha == 1)
@@ -37,30 +37,24 @@ int main(){
                 if (saque <= (conta + cheque))
                 {
                 	printf("O seguinte valor foi retirado com sucesso: %.2f\n", saque);
-                    printf("Vocï¿½ estourou seu saldo e serï¿½ descontado do cheque! \n");
+                    printf("Voce estourou seu saldo e sera descontado do cheque! \n");
                     descontado = saque - conta;
                     printf("Valor do cheque descontado: %.2f\n", cheque - descontado);
 				}
             	else
             	{
-                	printf("O valor desejado ï¿½ maior que saldo e o cheque juntos! \n");
+                	printf("O valor desejado supera o saldo e o cheque juntos! \n");
                 }
             }
             else
             {
             	printf("O seguinte valor foi retirado com sucesso: %.2f\n", saque);
             	printf("Novo saldo: %.2f\n", conta - saque);
-            	// Teste
-			   	if (conta < 1)
-			   	{
-			   		printf("Vocï¿½ zerou a conta! \n");
-				}
-				// Teste
 			}
         }
         else
         {
-            printf("Escolha uma opï¿½ï¿½o! \n");
+            printf("Escolha uma opcao! \n");
         }
     }
 	printf("============================================================= \n");
