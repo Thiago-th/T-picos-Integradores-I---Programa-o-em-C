@@ -1,0 +1,30 @@
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
+/*  Thiago Matheus Mendes dos Santos
+    Matrícula: 04059879
+    Turma: 4NMA */
+
+int main(){
+	int joao, ricardo;
+	float rodrigo;
+	float valor;
+	
+	printf("Valor a ser pago: ");
+	scanf("%f", &valor);
+	
+	
+	joao = valor/3;
+	
+	ricardo = valor/3;
+	
+	rodrigo = valor/3;
+	
+	
+	printf("Valor depois da divisï¿½o: \n");
+	
+	printf("Joï¿½o vai pagar: %.d\n", joao);
+	printf("Ricardo vai pagar: %.d\n", ricardo);
+	printf("Rodrigo vai pagar: %.2f\n", rodrigo);
+}
