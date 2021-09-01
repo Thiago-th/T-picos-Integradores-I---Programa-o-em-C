@@ -12,7 +12,7 @@ int main(){
     scanf("%f", &valor);
     
     if (valor < 90){
-        printf("O valor com desconto serï¿½ de: %.2fq\n", valor - (valor * 0.10));
+        printf("O valor com desconto sera de: %.2fq\n", valor - (valor * 0.10));
         printf("10%% de desconto. \n");
     }
     else{
