@@ -22,7 +22,7 @@ int main(){
 	rodrigo = valor/3;
 	
 	
-	printf("Valor depois da divisï¿½o: \n");
+	printf("Valor depois da divisao: \n");
 	
 	printf("Joao vai pagar: %.d\n", joao);
 	printf("Ricardo vai pagar: %.d\n", ricardo);
