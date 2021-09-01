@@ -1,0 +1,56 @@
+#include <iostream>
+#include <stdlib.h>
+
+/*  Thiago Matheus Mendes dos Santos
+    Matrícula: 04059879
+    Turma: 4NMA */
+
+int main(){
+	float flex, premium, gold;
+	float soma;
+	float kilos;
+	float desconto;
+	float desc;
+	
+	// R$ 100
+	printf("Quantos deseja Flex comprar: ");
+	scanf("%f", &flex);
+	printf("Quantos deseja Premium comprar: ");
+	scanf("%f", &premium);
+	printf("Quantos deseja Gold comprar: ");
+	scanf("%f", &gold);
+	
+	
+	// Soma dos descontos
+	if (flex > 0)
+	{
+		desconto = desconto + 10;
+		desc = desc + 0.10;
+	}
+	if (premium > 0)
+	{
+		desconto = desconto + 20;
+		desc = desc + 0.20;
+	}
+	if (gold > 0)
+	{
+		desconto = desconto + 30;
+		desc = desc + 0.30;
+	}	
+	
+	
+	printf("==================================== \n");
+	soma = flex*100 + premium*100 + gold*100;
+	printf("A pagar: %.2f\n", soma);
+	
+	printf("Desconto Total: %.f\n", desconto); 
+		
+	kilos = flex*20 + premium*20 + gold*20;
+	printf("Quantidade de Flex em kilos: %.f\n", flex*20);
+	printf("Quantidade de Premium em kilos: %.f\n", premium*20);
+	printf("Quantidade de Gold em kilos: %.f\n", gold*20);
+	printf("==================================== \n");
+	
+	printf("Total com desconto: %.2f\n", soma - (soma * desc));
+	printf("Total em kilos: %.f\n", kilos);
+}
