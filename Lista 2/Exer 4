@@ -1,0 +1,60 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+/*  Thiago Matheus Mendes dos Santos
+    Matricula: 04059879
+    Turma: 4NMA */
+int main(){
+	int qtd_funcionario, contador;
+	float total;
+	float maior;
+	float menor;
+	float posicao;
+	float exibir;
+	
+	
+
+	printf("Informe a quantidade de funcionarios: ");
+	scanf("%d", &qtd_funcionario);
+	printf("\n");
+	
+	float matricula[qtd_funcionario];
+	float salario[qtd_funcionario];
+	
+
+	for(int i = 0; i < qtd_funcionario; i++){
+		printf("Informe a matricula do %d: ", i+1);
+		scanf("%f", &matricula[i]);
+		
+		printf("Informe o salario: ");
+		scanf("%f", &salario[i]);
+		
+		total += salario[i];
+		contador += 1;
+		printf("\n");
+	}
+	
+	if(posicao == 0){
+		posicao = matricula[0];
+	}
+	maior = salario[0];
+	for(int i = 1; i < qtd_funcionario; i++){
+		if(salario[i] > maior){
+			maior = salario[i];
+			posicao = matricula[i];
+		}
+	}
+	
+	menor = salario[0];
+	for(int i = 1; i < qtd_funcionario; i++){
+		if(salario[i] < menor){
+			menor = salario[i];
+		}
+	}
+	
+	printf("Media de salarios da empresa: R$ %.2f\n", total/contador);
+	printf("Maior salario: R$ %.2f, Matricula: %.0f\n", maior, posicao);
+	printf("Menor salario: R$ %.2f\n", menor);
+	//printf("Matricula: %.0f\n", posicao);
+	system("PAUSE");
+}
