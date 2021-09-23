@@ -1,0 +1,137 @@
+#include <iostream>
+#include <stdlib.h>
+
+/*  Thiago Matheus Mendes dos Santos
+    Matricula: 04059879
+    Turma: 4NMA */
+int main(){
+	int opcao, pagamento;
+	int quantidade, arroz, file = 0, alface, macarrao, feijao;
+	float total, calculo;
+	int qtd_produto = 0;
+	
+	do
+	{
+		printf("================TABELA================\n");
+		printf("Codigo          Produto          Valor\n");
+		printf("1001            Arroz            5.32\n");
+		printf("1324            File             6.45\n");
+		printf("6548            Alface           2.37\n");
+		printf("987             Macarrao         5.32\n");
+		printf("7623            Feijao           6.45\n");
+		printf("Digite '0' para fechar a compra. \n");
+		printf("\n");
+		printf("Digite o codigo do produto: ");
+		scanf("%d", &opcao);
+		
+		if (opcao != 0){
+			if(opcao == 1001){
+				printf("Quantidade: ");
+				scanf("%d", &quantidade);
+				qtd_produto += quantidade;
+				arroz += quantidade;
+				total = total + (quantidade*5.32);
+			}
+					
+			if(opcao == 1324){
+				printf("Quantidade: ");
+				scanf("%d", &quantidade);
+				qtd_produto += quantidade;
+				file += quantidade;
+				total = total + (quantidade*6.45);
+			}
+					
+			if(opcao == 6548){
+				printf("Quantidade: ");
+				scanf("%d", &quantidade);
+				qtd_produto += quantidade;
+				alface += quantidade;
+				total = total + (quantidade*2.37);
+			}
+					
+			if(opcao == 987){
+				printf("Quantidade: ");
+				scanf("%d", &quantidade);
+				qtd_produto += quantidade;
+				macarrao += quantidade;
+				total = total + (quantidade*5.32);
+			}
+					
+			if(opcao == 7623){
+				printf("Quantidade: ");
+				scanf("%d", &quantidade);
+				qtd_produto += quantidade;
+				feijao += quantidade;
+				total = total + (quantidade*6.45);
+			}
+		}
+		printf("\n");
+		if(opcao == 0){
+			printf("Carrinho completo!\n");
+		}
+	} while (opcao != 0);
+	
+	printf("\n");
+	printf("===============PAGAMENTO===============\n");
+	printf("1 - Venda a Vista - desconto de 10%\n");
+	printf("2 - Venda a Prazo 30 dias - desconto de 5%\n");
+	printf("3 - Venda a Prazo 60 dias - mesmo preco\n");
+	printf("4 - Venda a Prazo 90 dias - acrescimo de 5%\n");
+	printf("5 - Venda com cartao de debito - desconto de 8%\n");
+	printf("6 - Venda com cartao de credito - desconto de 7%\n");
+	printf("=========================================\n");
+	
+	printf("Escolha a forma de pagamento:\n");
+	scanf("%d", &pagamento);
+	printf("\n");
+	
+	printf("==================RECIBO==================\n");
+	if(pagamento == 1){
+		calculo = total - (total*0.10);
+		printf("Venda a Vista - desconto de 10%\n");
+	}
+	if(pagamento == 2){
+		calculo = total - (total*0.05);
+		printf("Venda a Prazo 30 dias - desconto de 5%\n");
+	}
+	if(pagamento == 3){
+		calculo = total;
+		printf("Venda a Prazo 60 dias - mesmo preco\n");
+	}
+	if(pagamento == 4){
+		calculo = total + (total*0.05);
+		printf("Venda a Prazo 90 dias - acrescimo de 5%\n");
+	}
+	if(pagamento == 5){
+		calculo = total - (total*0.08);
+		printf("Venda com cartao de debito - desconto de 8%\n");
+	}
+	if(pagamento == 6){
+		calculo = total - (total*0.07);
+		printf("Venda com cartao de credito - desconto de 7%\n");
+	}
+
+	printf("Valor Bruto: R$ %.2f\n", total);
+	printf("Valor Liquido: R$ %.2f\n", calculo);
+	printf("Quantidade: %.d produtos\n", qtd_produto);
+	printf("=========================================\n");
+	
+	printf("================DESCRICAO================\n");
+	if(arroz > 0){
+		printf("Arroz             %dx              5.32\n", arroz);
+	}
+	if(file > 0){
+		printf("File              %dx              6.45\n", file);
+	}
+	if(alface > 0){
+		printf("Alface            %dx              2.37\n", alface);
+	}
+	if(macarrao > 0){
+		printf("Macarrao          %dx              5.32\n", macarrao);
+	}
+	if(feijao > 0){
+		printf("Feijao            %dx              6.45\n", feijao);
+	}
+	printf("=========================================\n");
+	system("PAUSE");
+}
