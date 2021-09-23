@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+/*  Thiago Matheus Mendes dos Santos
+    Matricula: 04059879
+    Turma: 4NMA */
+int main(){
+	int qtd_f;
+	float bruto, liquido;
+	
+	printf("Informe a quantidade de funcionarios: ");
+	scanf("%d", &qtd_f);
+	printf("\n");
+	
+	float hora_normal[qtd_f];
+	float hora_extra[qtd_f];
+	
+
+	for(int i = 0; i < qtd_f; i++){
+		printf("%d Informe as horas trabalhadas: ", i+1);
+		scanf("%f", &hora_normal[i]);
+		printf("Informe horas extras: ");
+		scanf("%f", &hora_extra[i]);
+		printf("\n");
+	}
+	
+
+	for(int i = 0; i < qtd_f; i++){
+		bruto = (10*hora_normal[i])+(15*hora_extra[i]);
+		printf("%d Salario Bruto: R$ %.2f\n", i+1, bruto);
+		liquido = bruto - (bruto*0.10);
+		printf("Salario Liquido: R$ %.2f\n", liquido);
+		printf("\n");
+	}
+  system("PAUSE");
+}
