@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+/*  Thiago Matheus Mendes dos Santos
+    Matricula: 04059879
+    Turma: 4NMA */
+int main(){
+	int qtd_p, qtd_f;
+	int opcao, contador;
+	float total, totalespeci;
+	
+	
+	printf("Informe a quantidade de produtos: ");
+	scanf("%d", &qtd_p);
+	printf("\n");
+	
+	
+	float preco_prod[qtd_p];
+	
+	
+	for(int i = 0; i < qtd_p; i++){
+		printf("Informe o valor do produto %d: ", i+1);
+		scanf("%f", &preco_prod[i]);
+		total += preco_prod[i];
+		contador += 1;
+		printf("\n");
+	}	
+	
+	
+	
+	printf("Existem mercadorias no estoque? 1-Sim/2-Nao \n");
+	scanf("%d", &opcao);
+	if (opcao == 1) {
+		printf("Quantos produtos? \n");
+		scanf("%d", &qtd_f);
+		
+		
+		float preco_estoque[qtd_f];
+		
+		
+		for(int x = 0; x < qtd_f; x++){
+			printf("Informe o valor da mercadoria %d: ", x+1);
+			scanf("%f", &preco_estoque[x]);
+			totalespeci += preco_estoque[x];
+			total += preco_estoque[x];
+			contador += 1;
+			printf("\n");
+		}
+	}
+	printf("Total no estoque: R$ %.2f\n", totalespeci);
+	printf("Valor Total dos produtos: R$ %.2f\n", total);
+	printf("Media de precos: R$ %.2f\n", total/contador);
+	printf("%d Produtos", contador);
+	system("PAUSE");
+}
